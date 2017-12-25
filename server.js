@@ -6,7 +6,7 @@ const routes = require('./routes');
 const app = express();
 
 //Connecting to the DB
-mongoose.connect('mongodb://localhost:27017', {
+mongoose.connect('mongodb://localhost:27017/lyra', {
     useMongoClient : true
 });
 

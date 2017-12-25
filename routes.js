@@ -30,4 +30,23 @@ router.post('/addContent', (req, res) => {
     })
 });
 
+router.get('/retrieveContent', (req, res) => {
+    content.find().exec((err, result) => {
+        if(err){
+            console.error('Error while finding items in DB');
+            res.send({
+                status : false,
+                payload : null
+            });
+            throw err;
+        }else{
+            console.info('Found items in DB');
+            res.send({
+                status : true,
+                payload : result
+            })
+        }
+    })
+});
+
 module.exports = router;
