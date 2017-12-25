@@ -21,11 +21,17 @@ router.post('/addContent', (req, res) => {
     newContent.save((err, content) => {
         if(err){
             console.error('There was an error while trying to save to the Database');
-            res.send(false);
+            res.send({
+                status : false,
+                payload : 'Error while trying to save to the Database'
+            });
             throw err;
         }else{
             console.info('Saved to the DB');
-            res.send(true)
+            res.send({
+                status : true,
+                payload : 'Data saved to database successfully'
+            });
         }
     })
 });
