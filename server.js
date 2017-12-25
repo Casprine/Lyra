@@ -24,6 +24,6 @@ db.once('open', () => {
 app.use(bodyParser.json());
 app.use(routes);
 
-app.listen('5000', () => {
+app.listen(3000, () => {
     console.info('Server started')
 });

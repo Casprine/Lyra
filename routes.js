@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 
-router.get('/', (req, res) => {
+router.get('/hello', (req, res) => {
     res.send('Welcome to Lyra');
 });
 
