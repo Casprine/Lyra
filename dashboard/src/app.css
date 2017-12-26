@@ -1,0 +1,16 @@
+body {
+    background: #EDEEF0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    border-radius: 32px !important;
+    margin-top: 10px !important;
+    margin-left: 6em !important;
+}
