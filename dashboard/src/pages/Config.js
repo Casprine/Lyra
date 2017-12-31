@@ -49,7 +49,7 @@ class Config extends Component{
     render(){
 
         return(
-            <div>
+            <div className="new">
                 <Header>
                     Add Resource
                 </Header>

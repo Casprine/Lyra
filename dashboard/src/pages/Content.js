@@ -29,7 +29,7 @@ class Content extends Component{
             )
         }else{
             return(
-                <div>
+                <div className="new">
                     <Header>Add content to your site</Header>
                     <p>This is based on your model configuration</p>
                     <ContentForm resources={this.state.resources}/>

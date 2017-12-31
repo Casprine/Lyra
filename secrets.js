@@ -1,6 +1,6 @@
 const secrets = {
-    databaseUsername : '',
-    databasePassword : ''
+    databaseUsername : 'rjforty',
+    databasePassword : 'lol'
 };
 
 

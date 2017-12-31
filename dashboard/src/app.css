@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
     background: #EDEEF0;
     display: flex;
-    justify-content: center;
-    align-items: center
+    justify-content: center;    
+    align-content: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .center {
@@ -13,4 +16,40 @@ body {
     border-radius: 32px !important;
     margin-top: 10px !important;
     margin-left: 6em !important;
+}
+
+.main{
+
+    margin-top :40px; 
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 90px;
+}
+
+.title {
+    margin-top: 45px;
+    text-align: center;
+    font-size: 65px;
+    /* margin-left: -10px; */
+}
+
+.about{
+    margin-top: 30px;
+    font-size: 19px;
+}
+
+.clicks {
+    margin: 20px;
+}
+
+.clicks button {
+    border-radius: 32px !important;
+}
+
+.new {
+    margin-top: 200px;
 }
