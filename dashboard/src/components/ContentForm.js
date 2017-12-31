@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { Card, Form, Input } from 'semantic-ui-react';
 
 
-
-
-
 class ContentForm extends Component{
 
     render(){
