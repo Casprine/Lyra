@@ -10,7 +10,7 @@
 Lyra is still in heavy development. This is only an alpha version.
 
 # Installation
-There is an api server and a client dashhboard to interact with the API server built with React. You must start both
+There is an api server and a client dashboard to interact with the API server built with React. You must start both
 projects manually by running *node server.js* in the root folder and navigating into the dashboard folder and running
 *yarn start*.. Yes we understand this is less than elegant, but there is a lot of work we havent done yet, so we are
 doing it this way for now.

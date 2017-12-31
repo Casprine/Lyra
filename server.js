@@ -2,11 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
+const secrets = require('./secrets');
 
 const app = express();
 
 //Connecting to the DB
-mongoose.connect('mongodb://localhost:27017/lyra', {
+mongoose.connect(`mongodb://${secrets.databaseUsername}:${secrets.databasePassword}@ds163494.mlab.com:63494/lyra`, {
     useMongoClient : true
 });
 
