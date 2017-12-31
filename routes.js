@@ -1,6 +1,7 @@
 const express = require('express');
-const content = require('./models/content');
 const router = express.Router();
+const functions = require('./functions');
+const content = require('./models/contentModel');
 
 
 
@@ -8,7 +9,7 @@ router.get('/hello', (req, res) => {
     res.send('Welcome to Lyra');
 });
 
-
+/*
 router.post('/addContent', (req, res) => {
     let title = req.body.content.title;
     let body = req.body.content.body;
@@ -36,6 +37,7 @@ router.post('/addContent', (req, res) => {
     })
 });
 
+
 router.get('/retrieveContent', (req, res) => {
     content.find().exec((err, result) => {
         if(err){
@@ -50,6 +52,41 @@ router.get('/retrieveContent', (req, res) => {
             res.send({
                 status : true,
                 payload : result
+            })
+        }
+    })
+});
+*/
+
+router.post('/createModel', (req, res) => {
+    console.log(req.body.model);
+    functions.createContentModel(req.body.model, result => {
+        if(result){
+            res.send({
+                status : true,
+                payload : 'Model has been saved'
+            })
+        }else{
+            res.send({
+                status : false,
+                payload : 'Model failed to save'
+            })
+        }
+    })
+});
+
+
+router.get('/readContentModel', (req, res) => {
+    functions.readContentModel(data => {
+        if(data){
+            res.send({
+                status : true,
+                payload : data
+            })
+        }else{
+            res.send({
+                status : false,
+                payload : 'Failed to read model. Probably it has not been created yet'
             })
         }
     })
