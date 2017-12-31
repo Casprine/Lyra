@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Header } from 'semantic-ui-react';
 import ContentForm from '../components/ContentForm';
 import axios from 'axios';
 
@@ -28,7 +29,12 @@ class Content extends Component{
             )
         }else{
             return(
-                <ContentForm resources={this.state.resources}/>
+                <div>
+                    <Header>Add content to your site</Header>
+                    <p>This is based on your model configuration</p>
+                    <ContentForm resources={this.state.resources}/>
+                </div>
+
             )
         }
      }

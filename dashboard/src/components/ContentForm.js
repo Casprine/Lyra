@@ -18,7 +18,7 @@ class ContentForm extends Component{
 
             return(
                 <Card>
-                    <Form>
+                    <Form style={{ padding : '8px' }}>
                         {Object.keys(this.props.resources).map(key => {
                             return(
                                 <Form.Field>
