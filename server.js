@@ -9,7 +9,7 @@ const secrets = require('./secrets');
 const app = express();
 
 //Connecting to the DB
-mongoose.connect(`mongodb://${secrets.databaseUsername}:${secrets.databasePassword}@ds163494.mlab.com:63494/lyra`, {
+mongoose.connect(secrets.database, {
     useMongoClient : true
 });
 
