@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
@@ -23,7 +24,9 @@ db.once('open', () => {
     console.info('Connection to database has been opened');
 });
 
+
 app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, 'dashboard/build')));
 app.use(bodyParser.json());
 app.use(routes);
 
