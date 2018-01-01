@@ -4,8 +4,8 @@
   "description": "A lightweight headless CMS",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild" : "cd client && yarn --production=false && yarn run build"
+    "start" : "node server.js",
+    "heroku-postbuild" : "cd dashboard && yarn --production=false && yarn run build"
   },
   "repository": {
     "type": "git",
