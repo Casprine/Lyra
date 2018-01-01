@@ -14,7 +14,7 @@ class Home extends Component{
                     <img src="http://res.cloudinary.com/kre/image/upload/v1514318568/shot_seo_50_rqnkqc.png"/>
                 </div>
                 <div className="title"> Lyra </div>
-                <div className="about"> The headless CMS for babies <span class="em em-baby"/></div>
+                <div className="about"> The headless CMS for babies <span className="em em-baby"/></div>
 
 
                 <div className="clicks"> 
