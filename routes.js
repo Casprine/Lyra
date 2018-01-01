@@ -9,32 +9,44 @@ router.get('/hello', (req, res) => {
     res.send('Welcome to Lyra');
 });
 
-/*
-router.post('/addContent', (req, res) => {
-    let title = req.body.content.title;
-    let body = req.body.content.body;
 
-    let newContent = new content({
-        title : title,
-        body : body
+router.post('/addContent', (req, res) => {
+    /* Trying to destructure all values from the object without knowing the keys. Will be glad
+        to get a simpler hack around this
+     */
+    let keys = [];
+    let resources = {};
+
+    // Pulling out keys from object to be used in destructuring
+    Object.keys(req.body.resources).map(key => {
+        keys.push(key);
     });
 
-    newContent.save((err, content) => {
+    // Building the resource object
+    keys.map(key => {
+        resources[key] = req.body.resources[key];
+    });
+
+    let newContent = new content(resources);
+
+    newContent.save((err) => {
         if(err){
-            console.error('There was an error while trying to save to the Database');
+            console.log(err);
+
             res.send({
                 status : false,
-                payload : 'Error while trying to save to the Database'
-            });
-            throw err;
+                payload : 'Failed to save content to database'
+            })
         }else{
-            console.info('Saved to the DB');
+            console.log('New content saved');
+
             res.send({
                 status : true,
-                payload : 'Data saved to database successfully'
-            });
+                payload : 'Successfully saved content to database'
+            })
         }
     })
+
 });
 
 
@@ -56,7 +68,7 @@ router.get('/retrieveContent', (req, res) => {
         }
     })
 });
-*/
+
 
 router.post('/createModel', (req, res) => {
     console.log(req.body.model);
