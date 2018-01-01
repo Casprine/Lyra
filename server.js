@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const logger = require('morgan');
 const routes = require('./routes');
 const secrets = require('./secrets');
 
@@ -22,6 +23,7 @@ db.once('open', () => {
     console.info('Connection to database has been opened');
 });
 
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(routes);
 
